@@ -1,0 +1,14 @@
+{
+    "name": "jedlynch/sorted-linked-list",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SortedLinkedList\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    }
+}
