@@ -20,7 +20,7 @@ Install via Composer:
 ## Usage
 
 ### Creating a New List
-php 
+```<?php 
 
 use SortedLinkedList\LinkedList; 
 use SortedLinkedList\Enum\Sort;
@@ -30,10 +30,11 @@ $list = LinkedList::new();
 
 // Or create a descending sorted list
 $list = LinkedList::new(Sort::DESC)
-
+```
 
 ### Adding Elements
-php 
+```
+<?php 
 
 // Add individual elements 
 $list->add(3)->add(1)->add(4);
@@ -43,58 +44,60 @@ $list = LinkedList::new()->fromArray([3, 1, 4]);
 
 // Result: [1, 3, 4] for ascending order 
 // Result: [4, 3, 1] for descending order
+```
 
 ### Removing Elements
-
-php
+```
+<?php
 
 // Removes the first occurrence of 3
-
 $list->remove(3); 
+```
 
 ### Converting to Array
-php 
+
+```
+<?php 
 
 $array = $list->toArray();
-
+```
 
 ### Working with Strings
-
-php 
+```
+<?php 
 
 $list = LinkedList::new(Sort::ASC);list->add("banana")
     ->add("apple")
     ->add("cherry");
 
 // Result: ["apple", "banana", "cherry"]
-
+```
 
 ## Type Safety
 
 The list enforces type safety - you cannot mix strings and integers in the same list:
-
-php 
+```
+<?php 
 
 $list = LinkedList::new();
 $list->add(1); 
 $list->add("string"); 
 
 // Throws Exception
-
+```
 
 ## Examples
 
-
-php 
+```
+<?php 
 
 // Creating a descending number list 
-
 $numbers = LinkedList::new(Sort::DESC);numbers->fromArray([1, 5, 3, 2, 4]);
+
 // Outputs: 5, 4, 3, 2, 1
 echo implode(', ', $numbers->toArray()); 
 
 // Creating an ascending string list 
-
 $words = LinkedList::new(Sort::ASC)
     ->add("zebra") 
     ->add("apple")
@@ -102,7 +105,7 @@ $words = LinkedList::new(Sort::ASC)
 
 // Outputs: apple, banana, zebra
 echo implode(', ', $words->toArray()); 
-
+```
 
 ## Requirements
 
